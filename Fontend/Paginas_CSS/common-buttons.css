@@ -1,97 +1,183 @@
-/* Estilos comuns para botões em todas as páginas */
-
-/* Botão Principal (Novo/Adicionar) */
-.btn-primary {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 500;
-}
-
-.btn-primary:hover {
-    background-color: #45a049;
-}
-
-/* Botão Secundário (Filtrar) */
-.btn-secondary {
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid #ddd;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.btn-secondary:hover {
-    background-color: #e0e0e0;
-}
-
-/* Botão de Aplicar Filtros */
-.btn-apply-filters {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9em;
-}
-
-.btn-apply-filters:hover {
-    background-color: #0056b3;
-}
-
-/* Botões de Ação na Tabela */
-.action-btn {
-    padding: 6px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 4px;
-    transition: all 0.3s ease;
+/* Estilos para botões comuns */
+.btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 32px;
-    height: 32px;
-}
-
-.action-btn i {
+    padding: 8px 16px;
+    border-radius: 4px;
     font-size: 14px;
-    color: white; /* Cor do ícone */
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
 }
 
-.view-btn {
+.btn i {
+    margin-right: 8px;
+}
+
+/* Botão Primário */
+.btn-primary {
     background-color: #2196F3;
+    color: white;
 }
 
-.edit-btn {
-    background-color: #FFC107;
-}
-
-.delete-btn {
-    background-color: #f44336;
-}
-
-.view-btn:hover {
+.btn-primary:hover {
     background-color: #1976D2;
 }
 
-.edit-btn:hover {
+/* Botão Secundário */
+.btn-secondary {
+    background-color: #607D8B;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #455A64;
+}
+
+/* Botão de Sucesso */
+.btn-success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #388E3C;
+}
+
+/* Botão de Perigo */
+.btn-danger {
+    background-color: #F44336;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #D32F2F;
+}
+
+/* Botão de Aviso */
+.btn-warning {
+    background-color: #FFC107;
+    color: #212121;
+}
+
+.btn-warning:hover {
     background-color: #FFA000;
 }
 
+/* Botão de Informação */
+.btn-info {
+    background-color: #00BCD4;
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: #0097A7;
+}
+
+/* Botão Outline */
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #2196F3;
+    color: #2196F3;
+}
+
+.btn-outline:hover {
+    background-color: #2196F3;
+    color: white;
+}
+
+/* Tamanhos de Botões */
+.btn-sm {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.btn-lg {
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* Botão com Ícone */
+.btn-icon {
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.btn-icon i {
+    margin: 0;
+}
+
+/* Botão Desabilitado */
+.btn:disabled,
+.btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Botão de Bloco */
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Grupo de Botões */
+.btn-group {
+    display: inline-flex;
+}
+
+.btn-group .btn {
+    border-radius: 0;
+}
+
+.btn-group .btn:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.btn-group .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Botão de Ação */
+.action-btn {
+    padding: 6px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.action-btn i {
+    font-size: 16px;
+}
+
+.view-btn {
+    color: #2196F3;
+}
+
+.view-btn:hover {
+    background-color: rgba(33, 150, 243, 0.1);
+}
+
+.edit-btn {
+    color: #FFC107;
+}
+
+.edit-btn:hover {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.delete-btn {
+    color: #F44336;
+}
+
 .delete-btn:hover {
-    background-color: #d32f2f;
+    background-color: rgba(244, 67, 54, 0.1);
 }
 
 /* Botões do Modal */
