@@ -9,7 +9,36 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/Paginas_HTML/index.html"
+      "dest": "/Paginas_HTML/Pagina_princial.html",
+      "continue": true
+    },
+    {
+      "src": "/Paginas_HTML/(.*)",
+      "dest": "/Paginas_HTML/$1",
+      "continue": true
+    },
+    {
+      "src": "/Paginas_CSS/(.*)",
+      "dest": "/Paginas_CSS/$1",
+      "continue": true
+    },
+    {
+      "src": "/Paginas_JS/(.*)",
+      "dest": "/Paginas_JS/$1",
+      "continue": true
+    },
+    {
+      "src": "/Imagens/(.*)",
+      "dest": "/Imagens/$1",
+      "continue": true
+    },
+    {
+      "src": "/Icones/(.*)",
+      "dest": "/Icones/$1",
+      "continue": true
+    },
+    {
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
