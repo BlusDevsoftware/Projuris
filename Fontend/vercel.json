@@ -9,31 +9,7 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/Paginas_HTML/Pagina_princial.html"
-    },
-    {
-      "src": "/favicon.ico",
-      "dest": "/Icones/favicon.ico"
-    },
-    {
-      "src": "/Paginas_HTML/(.*)",
-      "dest": "/Paginas_HTML/$1"
-    },
-    {
-      "src": "/Paginas_CSS/(.*)",
-      "dest": "/Paginas_CSS/$1"
-    },
-    {
-      "src": "/Paginas_JS/(.*)",
-      "dest": "/Paginas_JS/$1"
-    },
-    {
-      "src": "/Imagens/(.*)",
-      "dest": "/Imagens/$1"
-    },
-    {
-      "src": "/Icones/(.*)",
-      "dest": "/Icones/$1"
+      "dest": "/Paginas_HTML/index.html"
     },
     {
       "src": "/(.*)",
