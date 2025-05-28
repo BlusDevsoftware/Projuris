@@ -9,7 +9,7 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/Paginas_HTML/Pagina_princial.html",
+      "dest": "/Paginas_HTML/index.html",
       "continue": true
     },
     {
