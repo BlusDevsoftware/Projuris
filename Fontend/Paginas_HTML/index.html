@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProJuris - Sistema Jurídico</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Projuris - Sistema de Gestão Jurídica</title>
+    <link rel="stylesheet" href="../Paginas_CSS/estilo.css">
+    <link rel="stylesheet" href="../Paginas_CSS/estilo_principal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../Paginas_CSS/pagina_principal.css">
     <link rel="stylesheet" href="../Paginas_CSS/common-buttons.css">
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
@@ -13,66 +15,20 @@
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
-        <div class="logo" style="display: flex; align-items: center; justify-content: center; padding: 15px 0;">
-            <img src="../Imagens/bluedev-logo.png" alt="ProJuris Logo" style="height: 2.5em; margin-right: 10px;">
-            <h1><span class="orange">Pro</span><span class="highlight">Juris</span></h1>
+        <div class="logo">
+            <img src="../Imagens/logo.png" alt="Logo Projuris">
         </div>
-        <ul class="nav-menu">
-            <li><a href="Pagina_princial.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
-            <li><a href="agenda.html"><i class="fas fa-calendar-day"></i><span>Agendamentos</span></a></li>
-            <li class="has-submenu">
-                <a href="javascript:void(0)" class="submenu-trigger"><i class="fas fa-gavel"></i><span>Processos</span><i class="fas fa-chevron-down submenu-icon"></i></a>
-                <ul class="submenu">
-                    <li><a href="novo-processo.html"><i class="fas fa-plus-circle"></i><span>Novo Processo</span></a></li>
-                    <li><a href="lista-processos.html"><i class="fas fa-list"></i><span>Lista de Processos</span></a></li>
-                    <li><a href="audiencias.html"><i class="fas fa-balance-scale"></i><span>Audiências</span></a></li>
-                    <li><a href="prazos.html"><i class="fas fa-calendar-alt"></i><span>Prazos Processuais</span></a></li>
-                </ul>
-            </li>
-            <li class="has-submenu">
-                <a href="#" class="submenu-trigger"><i class="fas fa-users"></i><span>Cadastros</span><i class="fas fa-chevron-down submenu-icon"></i></a>
-                <ul class="submenu">
-                    <li><a href="clientes.html"><i class="fas fa-user-tie"></i><span>Clientes</span></a></li>
-                    <li><a href="advogados.html"><i class="fas fa-user-graduate"></i><span>Advogados</span></a></li>
-                    <li><a href="tribunais.html"><i class="fas fa-landmark"></i><span>Tribunais</span></a></li>
-                    <li><a href="usuarios.html"><i class="fas fa-user-shield"></i><span>Usuários</span></a></li>
-                </ul>
-            </li>
-            <li class="has-submenu">
-                <a href="#" class="submenu-trigger"><i class="fas fa-file-alt"></i><span>Documentos</span><i class="fas fa-chevron-down submenu-icon"></i></a>
-                <ul class="submenu">
-                    <li><a href="peticoes.html"><i class="fas fa-file-signature"></i><span>Petições</span></a></li>
-                    <li><a href="contratos.html"><i class="fas fa-file-contract"></i><span>Contratos</span></a></li>
-                    <li><a href="modelos.html"><i class="fas fa-copy"></i><span>Modelos</span></a></li>
-                </ul>
-            </li>
-            <li class="has-submenu">
-                <a href="#" class="submenu-trigger"><i class="fas fa-chart-bar"></i><span>Relatórios</span><i class="fas fa-chevron-down submenu-icon"></i></a>
-                <ul class="submenu">
-                    <li><a href="processos-por-status.html"><i class="fas fa-chart-pie"></i><span>Processos por Status</span></a></li>
-                    <li><a href="honorarios.html"><i class="fas fa-money-bill-wave"></i><span>Honorários</span></a></li>
-                    <li><a href="produtividade.html"><i class="fas fa-chart-line"></i><span>Produtividade</span></a></li>
-                </ul>
-            </li>
-            <li class="has-submenu">
-                <a href="javascript:void(0)" class="submenu-trigger"><i class="fas fa-dollar-sign"></i><span>Financeiro</span><i class="fas fa-chevron-down submenu-icon"></i></a>
-                <ul class="submenu">
-                    <li><a href="lancamentos.html"><i class="fas fa-plus"></i><span>Lançamentos</span></a></li>
-                    <li><a href="a-receber.html"><i class="fas fa-arrow-down"></i><span>A Receber</span></a></li>
-                    <li><a href="a-pagar.html"><i class="fas fa-arrow-up"></i><span>A Pagar</span></a></li>
-                </ul>
-            </li>
-            <li class="has-submenu">
-                <a href="#" class="submenu-trigger"><i class="fas fa-cog"></i><span>Configurações</span><i class="fas fa-chevron-down submenu-icon"></i></a>
-                <ul class="submenu">
-                    <li><a href="parametros.html"><i class="fas fa-sliders-h"></i><span>Parâmetros</span></a></li>
-                    <li><a href="backup.html"><i class="fas fa-database"></i><span>Backup</span></a></li>
-                </ul>
-            </li>
-        </ul>
-        <div class="logout-button">
-            <a href="index.html"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Página Principal</a></li>
+                <li><a href="agenda.html"><i class="fas fa-calendar"></i> Agenda</a></li>
+                <li><a href="processos.html"><i class="fas fa-gavel"></i> Processos</a></li>
+                <li><a href="clientes.html"><i class="fas fa-users"></i> Clientes</a></li>
+                <li><a href="tribunais.html"><i class="fas fa-balance-scale"></i> Tribunais</a></li>
+                <li><a href="usuarios.html"><i class="fas fa-user-cog"></i> Usuários</a></li>
+                <li><a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a></li>
+            </ul>
+        </nav>
     </div>
 
     <!-- Main Content -->

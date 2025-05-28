@@ -1,0 +1,64 @@
+/* Estilos específicos para a página principal */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 1.2em;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.card-content {
+    color: #666;
+}
+
+.stat-value {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 10px 0;
+}
+
+.stat-label {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+.chart-container {
+    height: 300px;
+    margin-top: 20px;
+}
+
+/* Animações */
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+} 
