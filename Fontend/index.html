@@ -2,10 +2,86 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=Paginas_HTML/index.html">
-    <title>Redirecionando...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projuris - Sistema de Gestão Jurídica</title>
+    <link rel="stylesheet" href="Paginas_CSS/estilo.css">
+    <link rel="stylesheet" href="Paginas_CSS/estilo_principal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <p>Se você não for redirecionado automaticamente, <a href="Paginas_HTML/index.html">clique aqui</a>.</p>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="Imagens/logo.png" alt="Logo Projuris">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Página Principal</a></li>
+                <li><a href="Paginas_HTML/agenda.html"><i class="fas fa-calendar"></i> Agenda</a></li>
+                <li><a href="Paginas_HTML/processos.html"><i class="fas fa-gavel"></i> Processos</a></li>
+                <li><a href="Paginas_HTML/clientes.html"><i class="fas fa-users"></i> Clientes</a></li>
+                <li><a href="Paginas_HTML/tribunais.html"><i class="fas fa-balance-scale"></i> Tribunais</a></li>
+                <li><a href="Paginas_HTML/usuarios.html"><i class="fas fa-user-cog"></i> Usuários</a></li>
+                <li><a href="Paginas_HTML/configuracoes.html"><i class="fas fa-cog"></i> Configurações</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="dashboard">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Processos Ativos</h2>
+                </div>
+                <div class="card-content">
+                    <div class="stat-value">150</div>
+                    <div class="stat-label">Total de processos em andamento</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Audiências</h2>
+                </div>
+                <div class="card-content">
+                    <div class="stat-value">12</div>
+                    <div class="stat-label">Audiências agendadas esta semana</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Clientes</h2>
+                </div>
+                <div class="card-content">
+                    <div class="stat-value">45</div>
+                    <div class="stat-label">Total de clientes ativos</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Prazos</h2>
+                </div>
+                <div class="card-content">
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Prazos a vencer esta semana</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Processos por Status</h2>
+            </div>
+            <div class="card-content">
+                <div class="chart-container">
+                    <canvas id="processosChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Paginas_JS/dashboard.js"></script>
 </body>
 </html> 
