@@ -12,6 +12,10 @@
       "dest": "/Paginas_HTML/Pagina_princial.html"
     },
     {
+      "src": "/favicon.ico",
+      "dest": "/Icones/favicon.ico"
+    },
+    {
       "src": "/Paginas_HTML/(.*)",
       "dest": "/Paginas_HTML/$1"
     },
@@ -34,39 +38,6 @@
     {
       "src": "/(.*)",
       "dest": "/$1"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/favicon.ico",
-      "destination": "/Icones/favicon.ico"
-    },
-    {
-      "source": "/Paginas_CSS/(.*)",
-      "destination": "/Paginas_CSS/$1"
-    },
-    {
-      "source": "/Paginas_JS/(.*)",
-      "destination": "/Paginas_JS/$1"
-    },
-    {
-      "source": "/Imagens/(.*)",
-      "destination": "/Imagens/$1"
-    },
-    {
-      "source": "/Icones/(.*)",
-      "destination": "/Icones/$1"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
     }
   ]
 } 
