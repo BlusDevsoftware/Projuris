@@ -12,6 +12,10 @@
       "destination": "/Paginas_HTML/Pagina_princial.html"
     },
     {
+      "source": "/favicon.ico",
+      "destination": "/Icones/favicon.ico"
+    },
+    {
       "source": "/Paginas_HTML/(.*)",
       "destination": "/Paginas_HTML/$1"
     },
