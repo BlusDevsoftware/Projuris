@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "Paginas_HTML/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Paginas_CSS/*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Paginas_JS/*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Imagens/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Icones/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/Paginas_HTML/Pagina_princial.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+} 
