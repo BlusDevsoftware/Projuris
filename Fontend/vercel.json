@@ -2,18 +2,50 @@
   "version": 2,
   "builds": [
     {
-      "src": "**/*",
+      "src": "Paginas_HTML/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Paginas_CSS/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Paginas_JS/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Imagens/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Icones/**/*",
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "source": "/",
+      "destination": "/Paginas_HTML/Pagina_princial.html"
     },
     {
-      "src": "/",
-      "dest": "/Paginas_HTML/Pagina_princial.html"
+      "source": "/Paginas_HTML/:path*",
+      "destination": "/Paginas_HTML/:path*"
+    },
+    {
+      "source": "/Paginas_CSS/:path*",
+      "destination": "/Paginas_CSS/:path*"
+    },
+    {
+      "source": "/Paginas_JS/:path*",
+      "destination": "/Paginas_JS/:path*"
+    },
+    {
+      "source": "/Imagens/:path*",
+      "destination": "/Imagens/:path*"
+    },
+    {
+      "source": "/Icones/:path*",
+      "destination": "/Icones/:path*"
     }
   ]
 } 
