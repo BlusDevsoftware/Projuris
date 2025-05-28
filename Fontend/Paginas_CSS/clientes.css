@@ -1,0 +1,93 @@
+/* Estilos específicos para a página de lista de clientes */
+
+.client-list-container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.client-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.client-list-header h2 {
+    margin: 0;
+    color: #202124;
+}
+
+.client-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilos para a tabela de clientes */
+.client-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.client-table th,
+.client-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.client-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+.client-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Estilos para a foto do cliente */
+.client-photo {
+    width: 50px;
+    padding: 8px !important;
+}
+
+.client-photo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.client-photo img:hover {
+    transform: scale(1.1);
+    border-color: #4a90e2;
+}
+
+/* Responsividade da tabela */
+@media (max-width: 768px) {
+    .client-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .client-photo {
+        width: 40px;
+    }
+
+    .client-photo img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .action-btn {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+} 

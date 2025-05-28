@@ -1,0 +1,98 @@
+/* Estilos para a página de Tribunais */
+.tribunal-list-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+.tribunal-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tribunal-list-header h2 {
+    color: #333;
+    margin: 0;
+}
+
+.tribunal-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.tribunal-filter-btn,
+.add-tribunal-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.tribunal-filter-btn {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.tribunal-filter-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.add-tribunal-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.add-tribunal-btn:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para a tabela de tribunais */
+.tribunal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tribunal-table th,
+.tribunal-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tribunal-table th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: 600;
+}
+
+.tribunal-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .tribunal-list-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tribunal-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .tribunal-table {
+        display: block;
+        overflow-x: auto;
+    }
+} 

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProJuris - Lista de Processos</title>
+    <link rel="stylesheet" href="../Paginas_CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Paginas_CSS/pagina_principal.css">
+    <link rel="stylesheet" href="../Paginas_CSS/lista-processos.css">
+    <link rel="stylesheet" href="../Paginas_CSS/processos-modals.css">
+    <link rel="stylesheet" href="../Paginas_CSS/common.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo" style="display: flex; align-items: center; justify-content: center; padding: 15px 0;">
+            <img src="../Imagens/bluedev-logo.png" alt="ProJuris Logo" style="height: 2.5em; margin-right: 10px;">
+            <h1><span class="orange">Pro</span><span class="highlight">Juris</span></h1>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="Pagina_princial.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+            <li><a href="agenda.html"><i class="fas fa-calendar-day"></i><span>Agenda do Dia</span></a></li>
+            <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-trigger active"><i class="fas fa-gavel"></i><span>Processos</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu" style="display: block;">
+                    <li><a href="novo-processo.html"><i class="fas fa-plus-circle"></i><span>Novo Processo</span></a></li>
+                    <li><a href="lista-processos.html" class="active"><i class="fas fa-list"></i><span>Lista de Processos</span></a></li>
+                    <li><a href="audiencias.html"><i class="fas fa-balance-scale"></i><span>Audiências</span></a></li>
+                    <li><a href="prazos.html"><i class="fas fa-calendar-alt"></i><span>Prazos Processuais</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-users"></i><span>Cadastros</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="clientes.html"><i class="fas fa-user-tie"></i><span>Clientes</span></a></li>
+                    <li><a href="advogados.html"><i class="fas fa-user-graduate"></i><span>Advogados</span></a></li>
+                    <li><a href="tribunais.html"><i class="fas fa-landmark"></i><span>Tribunais</span></a></li>
+                    <li><a href="usuarios.html"><i class="fas fa-user-shield"></i><span>Usuários</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-file-alt"></i><span>Documentos</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="peticoes.html"><i class="fas fa-file-signature"></i><span>Petições</span></a></li>
+                    <li><a href="contratos.html"><i class="fas fa-file-contract"></i><span>Contratos</span></a></li>
+                    <li><a href="modelos.html"><i class="fas fa-copy"></i><span>Modelos</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-chart-bar"></i><span>Relatórios</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="processos-por-status.html"><i class="fas fa-chart-pie"></i><span>Processos por Status</span></a></li>
+                    <li><a href="honorarios.html"><i class="fas fa-money-bill-wave"></i><span>Honorários</span></a></li>
+                    <li><a href="produtividade.html"><i class="fas fa-chart-line"></i><span>Produtividade</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-trigger"><i class="fas fa-dollar-sign"></i><span>Financeiro</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="lancamentos.html"><i class="fas fa-plus"></i><span>Lançamentos</span></a></li>
+                    <li><a href="a-receber.html"><i class="fas fa-arrow-down"></i><span>A Receber</span></a></li>
+                    <li><a href="a-pagar.html"><i class="fas fa-arrow-up"></i><span>A Pagar</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-cog"></i><span>Configurações</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="parametros.html"><i class="fas fa-sliders-h"></i><span>Parâmetros</span></a></li>
+                    <li><a href="backup.html"><i class="fas fa-database"></i><span>Backup</span></a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="logout-button">
+            <a href="index.html"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="welcome-text">
+                <h1>Lista de Processos</h1>
+                <p>Gerencie os processos jurídicos do sistema</p>
+            </div>
+            <div class="user-info">
+                <div class="notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">5</span>
+                </div>
+                <div class="user-avatar">A</div>
+            </div>
+        </div>
+
+        <!-- Lista de Processos Content -->
+        <div class="processos-container">
+            <div class="processos-header">
+                <h2>Processos</h2>
+                <div class="processos-actions">
+                    <button class="btn-novo-processo"><i class="fas fa-plus"></i> Novo Processo</button>
+                    <button class="processos-filter-btn"><i class="fas fa-filter"></i> Filtrar</button>
+                </div>
+            </div>
+
+            <div class="processos-filters">
+                <div class="filter-group">
+                    <label for="numero-processo">Número do Processo:</label>
+                    <input type="text" id="numero-processo" placeholder="Digite o número do processo">
+                </div>
+                <div class="filter-group">
+                    <label for="cliente">Cliente:</label>
+                    <select id="cliente">
+                        <option value="">Todos</option>
+                        <option value="1">Cliente 1</option>
+                        <option value="2">Cliente 2</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="tribunal">Tribunal:</label>
+                    <select id="tribunal">
+                        <option value="">Todos</option>
+                        <option value="1">Tribunal 1</option>
+                        <option value="2">Tribunal 2</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="status">Status:</label>
+                    <select id="status">
+                        <option value="">Todos</option>
+                        <option value="ativo">Ativo</option>
+                        <option value="arquivado">Arquivado</option>
+                        <option value="concluido">Concluído</option>
+                    </select>
+                </div>
+                <div class="filter-group filter-button">
+                    <label>&nbsp;</label>
+                    <button class="btn-aplicar-filtros">Aplicar Filtros</button>
+                </div>
+            </div>
+
+            <table class="processos-table">
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Cliente</th>
+                        <th>Tribunal</th>
+                        <th>Vara</th>
+                        <th>Data Início</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0001234-12.2024.8.26.0100</td>
+                        <td>João Silva</td>
+                        <td>TJSP</td>
+                        <td>1ª Vara Cível</td>
+                        <td>01/01/2024</td>
+                        <td><span class="status-label status-ativo">Ativo</span></td>
+                        <td>
+                            <button class="action-btn view-btn" title="Visualizar"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn edit-btn" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete-btn" title="Arquivar"><i class="fas fa-archive"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>0005678-12.2024.8.26.0100</td>
+                        <td>Maria Santos</td>
+                        <td>TJSP</td>
+                        <td>2ª Vara Cível</td>
+                        <td>15/12/2023</td>
+                        <td><span class="status-label status-ativo">Ativo</span></td>
+                        <td>
+                            <button class="action-btn view-btn" title="Visualizar"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn edit-btn" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete-btn" title="Arquivar"><i class="fas fa-archive"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal de Novo Processo -->
+    <div id="novo-processo-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Novo Processo</h2>
+                <button class="close-modal" onclick="closeNovoProcessoModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="form-novo-processo" onsubmit="event.preventDefault(); salvarProcesso('form-novo-processo');">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="numero-processo" class="required">Número do Processo:</label>
+                            <input type="text" id="numero-processo" name="numero-processo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cliente" class="required">Cliente:</label>
+                            <select id="cliente" name="cliente" required>
+                                <option value="">Selecione...</option>
+                                <option value="1">João Silva</option>
+                                <option value="2">Maria Santos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tribunal" class="required">Tribunal:</label>
+                            <select id="tribunal" name="tribunal" required>
+                                <option value="">Selecione...</option>
+                                <option value="1">TJSP</option>
+                                <option value="2">TRF3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="vara" class="required">Vara:</label>
+                            <select id="vara" name="vara" required>
+                                <option value="">Selecione...</option>
+                                <option value="1">1ª Vara Cível</option>
+                                <option value="2">2ª Vara Cível</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="data-inicio" class="required">Data de Início:</label>
+                            <input type="date" id="data-inicio" name="data-inicio" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo-processo" class="required">Tipo de Processo:</label>
+                            <select id="tipo-processo" name="tipo-processo" required>
+                                <option value="">Selecione...</option>
+                                <option value="civel">Cível</option>
+                                <option value="trabalhista">Trabalhista</option>
+                                <option value="criminal">Criminal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao" class="required">Descrição:</label>
+                        <textarea id="descricao" name="descricao" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="valor-causa">Valor da Causa:</label>
+                            <input type="text" id="valor-causa" name="valor-causa" class="valor-monetario">
+                        </div>
+                        <div class="form-group">
+                            <label for="status" class="required">Status:</label>
+                            <select id="status" name="status" required>
+                                <option value="ativo">Ativo</option>
+                                <option value="arquivado">Arquivado</option>
+                                <option value="concluido">Concluído</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-cancelar" onclick="closeNovoProcessoModal()">Cancelar</button>
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Audiência -->
+    <div id="audiencia-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Nova Audiência</h2>
+                <button class="close-modal" onclick="closeAudienciaModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="form-nova-audiencia" onsubmit="event.preventDefault(); salvarAudiencia('form-nova-audiencia');">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="processo-audiencia" class="required">Processo:</label>
+                            <select id="processo-audiencia" name="processo" required>
+                                <option value="">Selecione...</option>
+                                <option value="1">0001234-12.2024.8.26.0100 - João Silva</option>
+                                <option value="2">0005678-12.2024.8.26.0100 - Maria Santos</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo-audiencia" class="required">Tipo de Audiência:</label>
+                            <select id="tipo-audiencia" name="tipo" required>
+                                <option value="">Selecione...</option>
+                                <option value="inicial">Audiência Inicial</option>
+                                <option value="conciliacao">Audiência de Conciliação</option>
+                                <option value="instrucao">Audiência de Instrução</option>
+                                <option value="julgamento">Audiência de Julgamento</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="data-audiencia" class="required">Data:</label>
+                            <input type="date" id="data-audiencia" name="data" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hora-audiencia" class="required">Hora:</label>
+                            <input type="time" id="hora-audiencia" name="hora" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tribunal-audiencia" class="required">Tribunal:</label>
+                            <select id="tribunal-audiencia" name="tribunal" required>
+                                <option value="">Selecione...</option>
+                                <option value="1">TJSP</option>
+                                <option value="2">TRF3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="vara-audiencia" class="required">Vara:</label>
+                            <select id="vara-audiencia" name="vara" required>
+                                <option value="">Selecione...</option>
+                                <option value="1">1ª Vara Cível</option>
+                                <option value="2">2ª Vara Cível</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="endereco-audiencia" class="required">Endereço:</label>
+                        <input type="text" id="endereco-audiencia" name="endereco" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="observacoes-audiencia">Observações:</label>
+                        <textarea id="observacoes-audiencia" name="observacoes" rows="3"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="status-audiencia" class="required">Status:</label>
+                            <select id="status-audiencia" name="status" required>
+                                <option value="agendada">Agendada</option>
+                                <option value="confirmada">Confirmada</option>
+                                <option value="realizada">Realizada</option>
+                                <option value="cancelada">Cancelada</option>
+                                <option value="adiada">Adiada</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="advogado-audiencia" class="required">Advogado Responsável:</label>
+                            <select id="advogado-audiencia" name="advogado" required>
+                                <option value="">Selecione...</option>
+                                <option value="1">Dr. Carlos Silva</option>
+                                <option value="2">Dra. Ana Santos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-cancelar" onclick="closeAudienciaModal()">Cancelar</button>
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Paginas_JS/processos-modals.js"></script>
+    <script>
+        // Função para inicializar o estado dos menus
+        function initializeMenus() {
+            const currentPath = window.location.pathname;
+            const pathSegments = currentPath.replace(/^\/|\/$/g, '').split('/');
+            let currentPage = pathSegments.pop() || 'Pagina_princial.html';
+
+            if (currentPage === 'Fontend' || currentPage === 'Paginas_HTML' || currentPage === '') {
+                currentPage = 'Pagina_princial.html';
+            }
+
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                const linkHref = link.getAttribute('href');
+                if (linkHref && currentPage && linkHref.split('/').pop() === currentPage.split('/').pop()) {
+                    link.classList.add('active');
+                    const parentMenu = link.closest('.has-submenu');
+                    if (parentMenu) {
+                        parentMenu.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        // Toggle submenu
+        document.querySelectorAll('.submenu-trigger').forEach(trigger => {
+            trigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const parentMenu = this.closest('.has-submenu');
+                parentMenu.classList.toggle('active');
+            });
+        });
+
+        // Inicializa os menus quando a página carrega
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMenus();
+            
+            // Event Listeners para os botões
+            document.querySelector('.btn-novo-processo').addEventListener('click', function() {
+                showNovoProcessoModal();
+            });
+
+            document.querySelector('.btn-aplicar-filtros').addEventListener('click', function() {
+                alert('Funcionalidade de Filtros será implementada em breve.');
+            });
+
+            // Event Listeners para os botões de ação
+            document.querySelectorAll('.action-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (this.classList.contains('view-btn')) {
+                        alert('Funcionalidade de Visualizar será implementada em breve.');
+                    } else if (this.classList.contains('edit-btn')) {
+                        alert('Funcionalidade de Editar será implementada em breve.');
+                    } else if (this.classList.contains('delete-btn')) {
+                        if (confirm('Tem certeza que deseja excluir este processo?')) {
+                            alert('Funcionalidade de Excluir será implementada em breve.');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

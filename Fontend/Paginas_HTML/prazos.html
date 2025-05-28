@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProJuris - Prazos Processuais</title>
+    <link rel="stylesheet" href="../Paginas_CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Paginas_CSS/pagina_principal.css">
+    <link rel="stylesheet" href="../Paginas_CSS/prazos.css">
+    <link rel="stylesheet" href="../Paginas_CSS/processos-modals.css">
+    <link rel="stylesheet" href="../Paginas_CSS/common.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo" style="display: flex; align-items: center; justify-content: center; padding: 15px 0;">
+            <img src="../Imagens/bluedev-logo.png" alt="ProJuris Logo" style="height: 2.5em; margin-right: 10px;">
+            <h1><span class="orange">Pro</span><span class="highlight">Juris</span></h1>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="Pagina_princial.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+            <li><a href="agenda.html"><i class="fas fa-calendar-day"></i><span>Agenda do Dia</span></a></li>
+            <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-trigger active"><i class="fas fa-gavel"></i><span>Processos</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu" style="display: block;">
+                    <li><a href="novo-processo.html"><i class="fas fa-plus-circle"></i><span>Novo Processo</span></a></li>
+                    <li><a href="lista-processos.html"><i class="fas fa-list"></i><span>Lista de Processos</span></a></li>
+                    <li><a href="audiencias.html"><i class="fas fa-balance-scale"></i><span>Audiências</span></a></li>
+                    <li><a href="prazos.html" class="active"><i class="fas fa-calendar-alt"></i><span>Prazos Processuais</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-users"></i><span>Cadastros</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="clientes.html"><i class="fas fa-user-tie"></i><span>Clientes</span></a></li>
+                    <li><a href="advogados.html"><i class="fas fa-user-graduate"></i><span>Advogados</span></a></li>
+                    <li><a href="tribunais.html"><i class="fas fa-landmark"></i><span>Tribunais</span></a></li>
+                    <li><a href="usuarios.html"><i class="fas fa-user-shield"></i><span>Usuários</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-file-alt"></i><span>Documentos</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="peticoes.html"><i class="fas fa-file-signature"></i><span>Petições</span></a></li>
+                    <li><a href="contratos.html"><i class="fas fa-file-contract"></i><span>Contratos</span></a></li>
+                    <li><a href="modelos.html"><i class="fas fa-copy"></i><span>Modelos</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-chart-bar"></i><span>Relatórios</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="processos-por-status.html"><i class="fas fa-chart-pie"></i><span>Processos por Status</span></a></li>
+                    <li><a href="honorarios.html"><i class="fas fa-money-bill-wave"></i><span>Honorários</span></a></li>
+                    <li><a href="produtividade.html"><i class="fas fa-chart-line"></i><span>Produtividade</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-trigger"><i class="fas fa-dollar-sign"></i><span>Financeiro</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="lancamentos.html"><i class="fas fa-plus"></i><span>Lançamentos</span></a></li>
+                    <li><a href="a-receber.html"><i class="fas fa-arrow-down"></i><span>A Receber</span></a></li>
+                    <li><a href="a-pagar.html"><i class="fas fa-arrow-up"></i><span>A Pagar</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-cog"></i><span>Configurações</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="parametros.html"><i class="fas fa-sliders-h"></i><span>Parâmetros</span></a></li>
+                    <li><a href="backup.html"><i class="fas fa-database"></i><span>Backup</span></a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="logout-button">
+            <a href="index.html"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="welcome-text">
+                <h1>Prazos Processuais</h1>
+                <p>Gerencie os prazos processuais do sistema</p>
+            </div>
+            <div class="user-info">
+                <div class="notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">5</span>
+                </div>
+                <div class="user-avatar">A</div>
+            </div>
+        </div>
+
+        <!-- Prazos List Content -->
+        <div class="prazos-container">
+            <div class="prazos-header">
+                <h2>Prazos Processuais</h2>
+                <div class="prazos-actions">
+                    <button class="btn-novo-prazo"><i class="fas fa-plus"></i> Novo Prazo</button>
+                    <button class="prazos-filter-btn"><i class="fas fa-filter"></i> Filtrar</button>
+                </div>
+            </div>
+
+            <div class="prazos-filters">
+                <div class="filter-group">
+                    <label for="processo-prazo">Processo:</label>
+                    <select id="processo-prazo">
+                        <option value="">Todos</option>
+                        <option value="1">0001234-12.2024.8.26.0100 - João Silva</option>
+                        <option value="2">0005678-12.2024.8.26.0100 - Maria Santos</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="tipo-prazo">Tipo:</label>
+                    <select id="tipo-prazo">
+                        <option value="">Todos</option>
+                        <option value="contestacao">Contestação</option>
+                        <option value="recurso">Recurso</option>
+                        <option value="provas">Produção de Provas</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="data-inicio">Data Início:</label>
+                    <input type="date" id="data-inicio">
+                </div>
+                <div class="filter-group">
+                    <label for="data-fim">Data Fim:</label>
+                    <input type="date" id="data-fim">
+                </div>
+                <div class="filter-group filter-button">
+                    <label>&nbsp;</label>
+                    <button class="btn-aplicar-filtros">Aplicar Filtros</button>
+                </div>
+            </div>
+
+            <table class="prazos-table">
+                <thead>
+                    <tr>
+                        <th>Processo</th>
+                        <th>Tipo</th>
+                        <th>Data Início</th>
+                        <th>Data Fim</th>
+                        <th>Status</th>
+                        <th>Responsável</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0001234-12.2024.8.26.0100</td>
+                        <td>Contestação</td>
+                        <td>01/03/2024</td>
+                        <td>15/03/2024</td>
+                        <td><span class="status-label status-pendente">Pendente</span></td>
+                        <td>Dr. Carlos Silva</td>
+                        <td>
+                            <button class="action-btn view-btn" title="Visualizar"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn edit-btn" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete-btn" title="Excluir"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>0005678-12.2024.8.26.0100</td>
+                        <td>Recurso</td>
+                        <td>05/03/2024</td>
+                        <td>20/03/2024</td>
+                        <td><span class="status-label status-concluido">Concluído</span></td>
+                        <td>Dra. Ana Santos</td>
+                        <td>
+                            <button class="action-btn view-btn" title="Visualizar"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn edit-btn" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete-btn" title="Excluir"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal de Prazo -->
+    <div id="prazo-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Novo Prazo Processual</h2>
+                <button class="close-modal" onclick="closePrazoModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="form-novo-prazo" onsubmit="event.preventDefault(); salvarPrazo('form-novo-prazo');">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="processo-prazo" class="required">Processo:</label>
+                            <select id="processo-prazo" name="processo" required>
+                                <option value="">Selecione...</option>
+                                <option value="1">0001234-12.2024.8.26.0100 - João Silva</option>
+                                <option value="2">0005678-12.2024.8.26.0100 - Maria Santos</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo-prazo" class="required">Tipo de Prazo:</label>
+                            <select id="tipo-prazo" name="tipo" required>
+                                <option value="">Selecione...</option>
+                                <option value="contestacao">Contestação</option>
+                                <option value="recurso">Recurso</option>
+                                <option value="provas">Produção de Provas</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="data-inicio" class="required">Data Início:</label>
+                            <input type="date" id="data-inicio" name="data_inicio" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="data-fim" class="required">Data Fim:</label>
+                            <input type="date" id="data-fim" name="data_fim" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao-prazo" class="required">Descrição:</label>
+                        <textarea id="descricao-prazo" name="descricao" rows="3" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="status-prazo" class="required">Status:</label>
+                            <select id="status-prazo" name="status" required>
+                                <option value="pendente">Pendente</option>
+                                <option value="em_andamento">Em Andamento</option>
+                                <option value="concluido">Concluído</option>
+                                <option value="atrasado">Atrasado</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="responsavel-prazo" class="required">Responsável:</label>
+                            <select id="responsavel-prazo" name="responsavel" required>
+                                <option value="">Selecione...</option>
+                                <option value="1">Dr. Carlos Silva</option>
+                                <option value="2">Dra. Ana Santos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="observacoes-prazo">Observações:</label>
+                        <textarea id="observacoes-prazo" name="observacoes" rows="3"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-cancelar" onclick="closePrazoModal()">Cancelar</button>
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Paginas_JS/processos-modals.js"></script>
+    <script>
+        // Função para inicializar o estado dos menus
+        function initializeMenus() {
+            const currentPath = window.location.pathname;
+            const pathSegments = currentPath.replace(/^\/|\/$/g, '').split('/');
+            let currentPage = pathSegments.pop() || 'Pagina_princial.html';
+
+            if (currentPage === 'Fontend' || currentPage === 'Paginas_HTML' || currentPage === '') {
+                currentPage = 'Pagina_princial.html';
+            }
+
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                const linkHref = link.getAttribute('href');
+                if (linkHref && currentPage && linkHref.split('/').pop() === currentPage.split('/').pop()) {
+                    link.classList.add('active');
+                    const parentMenu = link.closest('.has-submenu');
+                    if (parentMenu) {
+                        parentMenu.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        // Toggle submenu
+        document.querySelectorAll('.submenu-trigger').forEach(trigger => {
+            trigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const parentMenu = this.closest('.has-submenu');
+                parentMenu.classList.toggle('active');
+            });
+        });
+
+        // Inicializa os menus quando a página carrega
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMenus();
+            
+            // Event Listeners para os botões
+            document.querySelector('.btn-novo-prazo').addEventListener('click', function() {
+                showPrazoModal();
+            });
+
+            document.querySelector('.btn-aplicar-filtros').addEventListener('click', function() {
+                alert('Funcionalidade de Filtros será implementada em breve.');
+            });
+
+            // Event Listeners para os botões de ação
+            document.querySelectorAll('.action-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (this.classList.contains('view-btn')) {
+                        alert('Funcionalidade de Visualizar será implementada em breve.');
+                    } else if (this.classList.contains('edit-btn')) {
+                        alert('Funcionalidade de Editar será implementada em breve.');
+                    } else if (this.classList.contains('delete-btn')) {
+                        if (confirm('Tem certeza que deseja excluir este prazo?')) {
+                            alert('Funcionalidade de Excluir será implementada em breve.');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

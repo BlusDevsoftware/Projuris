@@ -1,0 +1,80 @@
+/* Estilos específicos para a página de lista de advogados */
+
+.advogado-list-container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.advogado-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.advogado-list-header h2 {
+    margin: 0;
+    color: #202124;
+}
+
+.advogado-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilos para a tabela de advogados */
+.advogado-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.advogado-table th,
+.advogado-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e8eaed;
+}
+
+.advogado-table th {
+    background-color: #f8f9fa;
+    color: #5f6368;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.advogado-table tbody tr:hover {
+    background-color: #f1f3f4;
+}
+
+/* Estilos para a foto do advogado na tabela */
+.advogado-photo {
+    width: 50px;
+    padding: 8px !important;
+}
+
+.advogado-photo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.advogado-photo img:hover {
+    transform: scale(1.1);
+    border-color: #4a90e2;
+}
+
+@media (max-width: 768px) {
+    .advogado-photo {
+        width: 40px;
+    }
+    .advogado-photo img {
+        width: 32px;
+        height: 32px;
+    }
+} 

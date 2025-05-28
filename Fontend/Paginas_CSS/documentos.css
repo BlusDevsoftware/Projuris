@@ -1,0 +1,185 @@
+/* Estilos para a página de Documentos */
+.document-list-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+.document-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.document-list-header h2 {
+    color: #333;
+    margin: 0;
+}
+
+.document-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilos para a tabela de documentos */
+.document-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.document-table th,
+.document-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.document-table th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: 600;
+}
+
+.document-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Estilos para o status do documento */
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-badge.active {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-badge.inactive {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.status-badge.pending {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+/* Estilos para as variáveis do modelo */
+.variables-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.variable-tag {
+    background-color: #e3f2fd;
+    color: #1976D2;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.variable-tag:hover {
+    background-color: #bbdefb;
+}
+
+/* Estilos para campos de texto */
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* Estilos para campos monetários */
+.monetary-input {
+    text-align: right;
+    padding-right: 8px;
+}
+
+/* Estilos para o menu de seleção de tipo de documento */
+.document-type-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.document-type-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.document-type-btn:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.document-type-btn i {
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+.document-type-btn span {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .document-list-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .document-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .document-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .variables-list {
+        flex-direction: column;
+    }
+
+    .document-type-selection {
+        padding: 10px;
+    }
+
+    .document-type-btn {
+        padding: 12px;
+    }
+
+    .document-type-btn i {
+        font-size: 1.2em;
+    }
+
+    .document-type-btn span {
+        font-size: 1em;
+    }
+} 

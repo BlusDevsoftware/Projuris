@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProJuris - Advogados</title>
+    <link rel="stylesheet" href="../Paginas_CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Paginas_CSS/pagina_principal.css">
+    <link rel="stylesheet" href="../Paginas_CSS/advogados.css">
+    <link rel="stylesheet" href="../Paginas_CSS/cadastros-modals.css">
+    <link rel="stylesheet" href="../Paginas_CSS/common-buttons.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo" style="display: flex; align-items: center; justify-content: center; padding: 15px 0;">
+            <img src="../Imagens/bluedev-logo.png" alt="ProJuris Logo" style="height: 2.5em; margin-right: 10px;">
+            <h1><span class="orange">Pro</span><span class="highlight">Juris</span></h1>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="Pagina_princial.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+            <li><a href="agenda.html"><i class="fas fa-calendar-day"></i><span>Agenda do Dia</span></a></li>
+            <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-trigger"><i class="fas fa-gavel"></i><span>Processos</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="novo-processo.html"><i class="fas fa-plus-circle"></i><span>Novo Processo</span></a></li>
+                    <li><a href="lista-processos.html"><i class="fas fa-list"></i><span>Lista de Processos</span></a></li>
+                    <li><a href="audiencias.html"><i class="fas fa-balance-scale"></i><span>Audiências</span></a></li>
+                    <li><a href="prazos.html"><i class="fas fa-calendar-alt"></i><span>Prazos Processuais</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-users"></i><span>Cadastros</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="clientes.html"><i class="fas fa-user-tie"></i><span>Clientes</span></a></li>
+                    <li><a href="advogados.html"><i class="fas fa-user-graduate"></i><span>Advogados</span></a></li>
+                    <li><a href="tribunais.html"><i class="fas fa-landmark"></i><span>Tribunais</span></a></li>
+                    <li><a href="usuarios.html"><i class="fas fa-user-shield"></i><span>Usuários</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-file-alt"></i><span>Documentos</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="peticoes.html"><i class="fas fa-file-signature"></i><span>Petições</span></a></li>
+                    <li><a href="contratos.html"><i class="fas fa-file-contract"></i><span>Contratos</span></a></li>
+                    <li><a href="modelos.html"><i class="fas fa-copy"></i><span>Modelos</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-chart-bar"></i><span>Relatórios</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="processos-por-status.html"><i class="fas fa-chart-pie"></i><span>Processos por Status</span></a></li>
+                    <li><a href="honorarios.html"><i class="fas fa-money-bill-wave"></i><span>Honorários</span></a></li>
+                    <li><a href="produtividade.html"><i class="fas fa-chart-line"></i><span>Produtividade</span></a></li>
+                </ul>
+            </li>
+             <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-trigger"><i class="fas fa-dollar-sign"></i><span>Financeiro</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="lancamentos.html"><i class="fas fa-plus"></i><span>Lançamentos</span></a></li>
+                    <li><a href="a-receber.html"><i class="fas fa-arrow-down"></i><span>A Receber</span></a></li>
+                    <li><a href="a-pagar.html"><i class="fas fa-arrow-up"></i><span>A Pagar</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-cog"></i><span>Configurações</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="parametros.html"><i class="fas fa-sliders-h"></i><span>Parâmetros</span></a></li>
+                    <li><a href="backup.html"><i class="fas fa-database"></i><span>Backup</span></a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="logout-button">
+            <a href="index.html"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="welcome-text">
+                <h1>Advogados</h1>
+                <p>Gerencie os advogados cadastrados no sistema</p>
+            </div>
+            <div class="user-info">
+                <div class="notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">5</span>
+                </div>
+                <div class="user-avatar">A</div>
+            </div>
+        </div>
+
+        <!-- Advogado List Content -->
+        <div class="advogado-list-container">
+            <div class="advogado-list-header">
+                <h2>Lista de Advogados</h2>
+                <div class="advogado-actions">
+                    <button class="btn-secondary"><i class="fas fa-filter"></i> Filtrar</button>
+                    <button class="btn-primary" onclick="showNovoAdvogadoModal()"><i class="fas fa-plus"></i> Novo Advogado</button>
+                </div>
+            </div>
+
+            <table class="advogado-table">
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>OAB</th>
+                        <th>Contato</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo de linha de advogado (será preenchido dinamicamente) -->
+                    <tr>
+                        <td class="advogado-photo">
+                            <img src="../Imagens/default-avatar.png" alt="Foto do Advogado">
+                        </td>
+                        <td>00001</td>
+                        <td>Nome do Advogado</td>
+                        <td>OAB/XX 123.456</td>
+                        <td>email@advogado.com</td>
+                        <td>
+                            <button class="action-btn view-btn" title="Visualizar"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn edit-btn" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete-btn" title="Excluir"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="advogado-photo">
+                            <img src="../Imagens/default-avatar.png" alt="Foto do Advogado">
+                        </td>
+                        <td>00002</td>
+                        <td>Nome do Advogado 2</td>
+                        <td>OAB/YY 654.321</td>
+                        <td>email2@advogado.com</td>
+                        <td>
+                            <button class="action-btn view-btn" title="Visualizar"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn edit-btn" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete-btn" title="Excluir"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Modal de Novo Advogado -->
+        <div id="modal-novo-advogado" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Novo Advogado</h2>
+                    <button class="close-modal" onclick="closeNovoAdvogadoModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-novo-advogado" onsubmit="event.preventDefault(); salvarAdvogado('form-novo-advogado');">
+                        <!-- Seção de Foto e Identificação -->
+                        <div class="form-section">
+                            <h3>Identificação</h3>
+                            <div class="form-row">
+                                <div class="form-group photo-upload">
+                                    <label for="foto_advogado">Foto do Advogado:</label>
+                                    <div class="photo-preview">
+                                        <img id="foto_advogado_preview" src="../Imagens/default-avatar.png" alt="Foto do Advogado">
+                                        <div class="photo-overlay">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Alterar Foto</span>
+                                        </div>
+                                    </div>
+                                    <input type="file" id="foto_advogado" name="foto_advogado" accept="image/*" style="display: none;">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nome_advogado" class="required">Nome Completo:</label>
+                                    <input type="text" id="nome_advogado" name="nome_advogado" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="oab" class="required">OAB:</label>
+                                    <input type="text" id="oab" name="oab" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="codigo_advogado">Código do Advogado:</label>
+                                    <input type="text" id="codigo_advogado" name="codigo_advogado" readonly>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cpf_advogado" class="required">CPF:</label>
+                                    <input type="text" id="cpf_advogado" name="cpf_advogado" class="document-input" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Seção de Contato -->
+                        <div class="form-section">
+                            <h3>Contato</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email_advogado" class="required">E-mail:</label>
+                                    <input type="email" id="email_advogado" name="email_advogado" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefone_advogado" class="required">Telefone:</label>
+                                    <input type="text" id="telefone_advogado" name="telefone_advogado" class="phone-input" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="celular_advogado">Celular:</label>
+                                    <input type="text" id="celular_advogado" name="celular_advogado" class="phone-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="site_advogado">Site:</label>
+                                    <input type="url" id="site_advogado" name="site_advogado">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Seção de Endereço -->
+                        <div class="form-section">
+                            <h3>Endereço</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cep_advogado">CEP:</label>
+                                    <input type="text" id="cep_advogado" name="cep_advogado" class="cep-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="endereco_advogado">Endereço:</label>
+                                    <input type="text" id="endereco_advogado" name="endereco_advogado">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="numero_advogado">Número:</label>
+                                    <input type="text" id="numero_advogado" name="numero_advogado">
+                                </div>
+                                <div class="form-group">
+                                    <label for="complemento_advogado">Complemento:</label>
+                                    <input type="text" id="complemento_advogado" name="complemento_advogado">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="bairro_advogado">Bairro:</label>
+                                    <input type="text" id="bairro_advogado" name="bairro_advogado">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cidade_advogado">Cidade:</label>
+                                    <input type="text" id="cidade_advogado" name="cidade_advogado">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="estado_advogado">Estado:</label>
+                                    <select id="estado_advogado" name="estado_advogado">
+                                        <option value="">Selecione...</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <!-- Adicionar outros estados -->
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Seção de Observações -->
+                        <div class="form-section">
+                            <h3>Informações Adicionais</h3>
+                            <div class="form-group">
+                                <label for="observacoes_advogado">Observações:</label>
+                                <textarea id="observacoes_advogado" name="observacoes_advogado"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn-cancelar" onclick="closeNovoAdvogadoModal()">Cancelar</button>
+                            <button type="submit" class="btn-salvar">Salvar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Função para inicializar o estado dos menus
+        function initializeMenus() {
+            const currentPath = window.location.pathname;
+            const pathSegments = currentPath.replace(/^\/|\/$/g, '').split('/');
+            let currentPage = pathSegments.pop() || 'Pagina_princial.html';
+
+            if (currentPage === 'Fontend' || currentPage === 'Paginas_HTML' || currentPage === '') {
+                currentPage = 'Pagina_princial.html';
+            }
+
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                const linkHref = link.getAttribute('href');
+                 if (linkHref && currentPage && linkHref.split('/').pop() === currentPage.split('/').pop()) {
+                    link.classList.add('active');
+                    const parentMenu = link.closest('.has-submenu');
+                    if (parentMenu) {
+                        parentMenu.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        // Toggle submenu
+        document.querySelectorAll('.submenu-trigger').forEach(trigger => {
+            trigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const parentMenu = this.closest('.has-submenu');
+                parentMenu.classList.toggle('active');
+            });
+        });
+
+        // Previne que cliques nos itens do submenu fechem o menu e marca o item ativo
+        document.querySelectorAll('.submenu a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.stopPropagation();
+                document.querySelectorAll('.submenu a').forEach(otherLink => {
+                    otherLink.classList.remove('active');
+                });
+                this.classList.add('active');
+                const parentMenu = this.closest('.has-submenu');
+                if (parentMenu) {
+                    parentMenu.classList.add('active');
+                }
+            });
+        });
+
+        // Inicializa os menus quando a página carrega
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMenus();
+        });
+
+        // TODO: Implementar funcionalidade de Filtrar e Novo Advogado
+         document.querySelector('.add-advogado-btn').addEventListener('click', function() {
+             showNovoAdvogadoModal();
+         });
+
+         document.querySelector('.advogado-filter-btn').addEventListener('click', function() {
+             alert('Funcionalidade Filtrar Advogados será implementada em breve.');
+         });
+
+        // Funções para abrir e fechar o modal de advogado
+        function showNovoAdvogadoModal() {
+            var modal = document.getElementById('modal-novo-advogado');
+            if (modal) {
+                modal.classList.add('show');
+                modal.style.display = 'flex';
+            }
+        }
+
+        function closeNovoAdvogadoModal() {
+            var modal = document.getElementById('modal-novo-advogado');
+            if (modal) {
+                modal.classList.remove('show');
+                modal.style.display = 'none';
+            }
+        }
+
+    </script>
+    <script src="../Paginas_JS/advogados-modals.js"></script>
+</body>
+</html> 

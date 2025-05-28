@@ -1,0 +1,69 @@
+.processos-status-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.processos-status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.status-chart-area {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    margin-bottom: 20px;
+}
+
+.status-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.status-summary-table th,
+.status-summary-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.status-summary-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.status-summary-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Optional: Styles for status labels in the table if needed */
+.status-label {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-aberto {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-em-andamento {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-arquivado {
+    background-color: #d6d8db;
+    color: #495057;
+}
+
+.status-suspenso {
+    background-color: #f8d7da;
+    color: #721c24;
+} 

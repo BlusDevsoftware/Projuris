@@ -1,0 +1,239 @@
+/* Estilos para a página de Lista de Processos */
+.processos-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+.processos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.processos-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.processos-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-novo-processo,
+.btn-nova-audiencia,
+.processos-filter-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-novo-processo {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.btn-novo-processo:hover {
+    background-color: #357abd;
+}
+
+.btn-nova-audiencia {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.btn-nova-audiencia:hover {
+    background-color: #1b5e20;
+}
+
+.processos-filter-btn {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.processos-filter-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilos para os filtros */
+.processos-filters {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-group.filter-button {
+    display: flex;
+    align-items: flex-end;
+}
+
+.filter-group label {
+    font-size: 14px;
+    color: #666;
+}
+
+.filter-group input,
+.filter-group select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-aplicar-filtros {
+    padding: 8px 16px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    height: 36px;
+    width: 100%;
+}
+
+.btn-aplicar-filtros:hover {
+    background-color: #357abd;
+}
+
+/* Estilos para a tabela */
+.processos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.processos-table th,
+.processos-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.processos-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    color: #333;
+}
+
+.processos-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para os status */
+.status-label {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-ativo {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.status-arquivado {
+    background-color: #f5f5f5;
+    color: #757575;
+}
+
+.status-concluido {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* Estilos para os botões de ação */
+.action-btn {
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 4px;
+    transition: all 0.3s ease;
+}
+
+.view-btn {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.edit-btn {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+.delete-btn {
+    background-color: #ffebee;
+    color: #d32f2f;
+}
+
+.view-btn:hover {
+    background-color: #bbdefb;
+}
+
+.edit-btn:hover {
+    background-color: #ffe0b2;
+}
+
+.delete-btn:hover {
+    background-color: #ffcdd2;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .processos-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .processos-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .processos-actions {
+        flex-direction: column;
+    }
+
+    .processos-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-group.filter-button {
+        margin-top: 10px;
+    }
+
+    .processos-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .processos-table th,
+    .processos-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+} 

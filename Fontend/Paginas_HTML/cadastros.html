@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastros - BlueJuri</title>
+    <link rel="stylesheet" href="../Paginas_CSS/styles.css">
+    <link rel="stylesheet" href="../Paginas_CSS/pagina_principal.css">
+    <link rel="stylesheet" href="../Paginas_CSS/cadastros.css">
+    <link rel="stylesheet" href="../Paginas_CSS/cadastros-modals.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../Imagens/logo.png" alt="BlueJuri Logo">
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="agenda.html"><i class="fas fa-calendar"></i> Agenda do Dia</a></li>
+                    <li><a href="lista-processos.html"><i class="fas fa-gavel"></i> Processos</a></li>
+                    <li class="active"><a href="cadastros.html"><i class="fas fa-database"></i> Cadastros</a></li>
+                    <li><a href="documentos.html"><i class="fas fa-file-alt"></i> Documentos</a></li>
+                    <li><a href="relatorios.html"><i class="fas fa-chart-bar"></i> Relatórios</a></li>
+                    <li><a href="financeiro.html"><i class="fas fa-dollar-sign"></i> Financeiro</a></li>
+                    <li><a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h1>Cadastros</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <span>Bem-vindo, Usuário</span>
+                        <img src="../Imagens/user-avatar.png" alt="Avatar do Usuário">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Conteúdo da Página -->
+            <div class="cadastros-container">
+                <!-- Seção de Clientes -->
+                <div class="cadastro-section">
+                    <div class="section-header">
+                        <h2>Clientes</h2>
+                        <button type="button" class="btn-novo" onclick="showNovoClienteModal()">
+                            <i class="fas fa-plus"></i> Novo Cliente
+                        </button>
+                    </div>
+                    <div class="table-container">
+                        <table class="cadastros-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome/Razão Social</th>
+                                    <th>CPF/CNPJ</th>
+                                    <th>Telefone</th>
+                                    <th>Email</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>João Silva</td>
+                                    <td>123.456.789-00</td>
+                                    <td>(11) 98765-4321</td>
+                                    <td>joao.silva@email.com</td>
+                                    <td>
+                                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                        <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Seção de Advogados -->
+                <div class="cadastro-section">
+                    <div class="section-header">
+                        <h2>Advogados</h2>
+                        <button class="btn-novo" onclick="showNovoAdvogadoModal()">
+                            <i class="fas fa-plus"></i> Novo Advogado
+                        </button>
+                    </div>
+                    <div class="table-container">
+                        <table class="cadastros-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>OAB</th>
+                                    <th>Telefone</th>
+                                    <th>Email</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Maria Santos</td>
+                                    <td>123456/SP</td>
+                                    <td>(11) 98765-4321</td>
+                                    <td>maria.santos@email.com</td>
+                                    <td>
+                                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                        <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Seção de Tribunais -->
+                <div class="cadastro-section">
+                    <div class="section-header">
+                        <h2>Tribunais</h2>
+                        <button class="btn-novo" onclick="showNovoTribunalModal()">
+                            <i class="fas fa-plus"></i> Novo Tribunal
+                        </button>
+                    </div>
+                    <div class="table-container">
+                        <table class="cadastros-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Estado</th>
+                                    <th>Endereço</th>
+                                    <th>Telefone</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>TJSP</td>
+                                    <td>SP</td>
+                                    <td>Av. Paulista, 1000</td>
+                                    <td>(11) 3333-3333</td>
+                                    <td>
+                                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                        <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Seção de Varas -->
+                <div class="cadastro-section">
+                    <div class="section-header">
+                        <h2>Varas</h2>
+                        <button class="btn-novo" onclick="showNovaVaraModal()">
+                            <i class="fas fa-plus"></i> Nova Vara
+                        </button>
+                    </div>
+                    <div class="table-container">
+                        <table class="cadastros-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Tribunal</th>
+                                    <th>Endereço</th>
+                                    <th>Telefone</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1ª Vara Cível</td>
+                                    <td>TJSP</td>
+                                    <td>Av. Paulista, 1000</td>
+                                    <td>(11) 3333-3333</td>
+                                    <td>
+                                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                        <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Novo Cliente -->
+    <div id="modal-novo-cliente" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Novo Cliente</h2>
+                <button class="modal-close" onclick="closeNovoClienteModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="form-novo-cliente" onsubmit="salvarCliente('form-novo-cliente'); return false;">
+                    <div class="form-row">
+                        <div class="form-group required">
+                            <label for="tipo_pessoa">Tipo de Pessoa</label>
+                            <select id="tipo_pessoa" name="tipo_pessoa" required>
+                                <option value="">Selecione</option>
+                                <option value="PF">Pessoa Física</option>
+                                <option value="PJ">Pessoa Jurídica</option>
+                            </select>
+                        </div>
+                        <div class="form-group required">
+                            <label for="nome">Nome/Razão Social</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group required">
+                            <label for="documento">CPF/CNPJ</label>
+                            <input type="text" id="documento" name="documento" class="document-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" id="telefone" name="telefone" class="phone-input">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" id="endereco" name="endereco">
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="observacoes">Observações</label>
+                        <textarea id="observacoes" name="observacoes"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-cancelar" onclick="closeNovoClienteModal()">Cancelar</button>
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Novo Advogado -->
+    <div id="modal-novo-advogado" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Novo Advogado</h2>
+                <button class="modal-close" onclick="closeNovoAdvogadoModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="form-novo-advogado" onsubmit="salvarAdvogado('form-novo-advogado'); return false;">
+                    <div class="form-row">
+                        <div class="form-group required">
+                            <label for="nome_advogado">Nome</label>
+                            <input type="text" id="nome_advogado" name="nome" required>
+                        </div>
+                        <div class="form-group required">
+                            <label for="oab">OAB</label>
+                            <input type="text" id="oab" name="oab" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefone_advogado">Telefone</label>
+                            <input type="text" id="telefone_advogado" name="telefone" class="phone-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="email_advogado">Email</label>
+                            <input type="email" id="email_advogado" name="email">
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="observacoes_advogado">Observações</label>
+                        <textarea id="observacoes_advogado" name="observacoes"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-cancelar" onclick="closeNovoAdvogadoModal()">Cancelar</button>
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Novo Tribunal -->
+    <div id="modal-novo-tribunal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Novo Tribunal</h2>
+                <button class="modal-close" onclick="closeNovoTribunalModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="form-novo-tribunal" onsubmit="salvarTribunal('form-novo-tribunal'); return false;">
+                    <div class="form-row">
+                        <div class="form-group required">
+                            <label for="nome_tribunal">Nome</label>
+                            <input type="text" id="nome_tribunal" name="nome" required>
+                        </div>
+                        <div class="form-group required">
+                            <label for="estado">Estado</label>
+                            <select id="estado" name="estado" required>
+                                <option value="">Selecione</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <!-- Adicionar outros estados -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="endereco_tribunal">Endereço</label>
+                            <input type="text" id="endereco_tribunal" name="endereco">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone_tribunal">Telefone</label>
+                            <input type="text" id="telefone_tribunal" name="telefone" class="phone-input">
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="observacoes_tribunal">Observações</label>
+                        <textarea id="observacoes_tribunal" name="observacoes"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-cancelar" onclick="closeNovoTribunalModal()">Cancelar</button>
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Nova Vara -->
+    <div id="modal-nova-vara" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Nova Vara</h2>
+                <button class="modal-close" onclick="closeNovaVaraModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="form-nova-vara" onsubmit="salvarVara('form-nova-vara'); return false;">
+                    <div class="form-row">
+                        <div class="form-group required">
+                            <label for="nome_vara">Nome</label>
+                            <input type="text" id="nome_vara" name="nome" required>
+                        </div>
+                        <div class="form-group required">
+                            <label for="tribunal_vara">Tribunal</label>
+                            <select id="tribunal_vara" name="tribunal" required>
+                                <option value="">Selecione</option>
+                                <option value="1">TJSP</option>
+                                <option value="2">TRF3</option>
+                                <!-- Adicionar outros tribunais -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="endereco_vara">Endereço</label>
+                            <input type="text" id="endereco_vara" name="endereco">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone_vara">Telefone</label>
+                            <input type="text" id="telefone_vara" name="telefone" class="phone-input">
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="observacoes_vara">Observações</label>
+                        <textarea id="observacoes_vara" name="observacoes"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-cancelar" onclick="closeNovaVaraModal()">Cancelar</button>
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Paginas_JS/menu.js"></script>
+    <script src="../Paginas_JS/cadastros-modals.js"></script>
+</body>
+</html> 

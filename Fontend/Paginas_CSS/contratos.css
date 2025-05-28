@@ -1,0 +1,110 @@
+/* Estilos específicos para a página de lista de contratos */
+
+.contrato-list-container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contrato-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contrato-list-header h2 {
+    margin: 0;
+    color: #202124;
+}
+
+.contrato-actions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    margin-left: 10px;
+}
+
+.add-contrato-btn {
+    background-color: #1a73e8;
+    color: white;
+}
+
+.add-contrato-btn:hover {
+    background-color: #1557b0;
+}
+
+.contrato-filter-btn {
+    background-color: #f1f3f4;
+    color: #202124;
+}
+
+.contrato-filter-btn:hover {
+    background-color: #e8eaed;
+}
+
+.contrato-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.contrato-table th,
+.contrato-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e8eaed;
+}
+
+.contrato-table th {
+    background-color: #f8f9fa;
+    color: #5f6368;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.contrato-table tbody tr:hover {
+    background-color: #f1f3f4;
+}
+
+.contrato-table .action-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 5px;
+    transition: background-color 0.2s;
+}
+
+.contrato-table .view-btn {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+}
+
+.contrato-table .view-btn:hover {
+    background-color: #d2e3fc;
+}
+
+.contrato-table .edit-btn {
+    background-color: #fef7e0;
+    color: #f9ab00;
+}
+
+.contrato-table .edit-btn:hover {
+    background-color: #fde293;
+}
+
+.contrato-table .delete-btn {
+    background-color: #fce8e6;
+    color: #d93025;
+}
+
+.contrato-table .delete-btn:hover {
+    background-color: #fccac2;
+} 

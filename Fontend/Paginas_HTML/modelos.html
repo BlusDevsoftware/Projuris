@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProJuris - Modelos</title>
+    <link rel="stylesheet" href="../Paginas_CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Paginas_CSS/pagina_principal.css">
+    <link rel="stylesheet" href="../Paginas_CSS/documentos.css">
+    <link rel="stylesheet" href="../Paginas_CSS/cadastros-modals.css">
+    <link rel="stylesheet" href="../Paginas_CSS/common-buttons.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo" style="display: flex; align-items: center; justify-content: center; padding: 15px 0;">
+            <img src="../Imagens/bluedev-logo.png" alt="ProJuris Logo" style="height: 2.5em; margin-right: 10px;">
+            <h1><span class="orange">Pro</span><span class="highlight">Juris</span></h1>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="Pagina_princial.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+            <li><a href="agenda.html"><i class="fas fa-calendar-day"></i><span>Agenda do Dia</span></a></li>
+            <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-trigger"><i class="fas fa-gavel"></i><span>Processos</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="novo-processo.html"><i class="fas fa-plus-circle"></i><span>Novo Processo</span></a></li>
+                    <li><a href="lista-processos.html"><i class="fas fa-list"></i><span>Lista de Processos</span></a></li>
+                    <li><a href="audiencias.html"><i class="fas fa-balance-scale"></i><span>Audiências</span></a></li>
+                    <li><a href="prazos.html"><i class="fas fa-calendar-alt"></i><span>Prazos Processuais</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-users"></i><span>Cadastros</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="clientes.html"><i class="fas fa-user-tie"></i><span>Clientes</span></a></li>
+                    <li><a href="advogados.html"><i class="fas fa-user-graduate"></i><span>Advogados</span></a></li>
+                    <li><a href="tribunais.html"><i class="fas fa-landmark"></i><span>Tribunais</span></a></li>
+                    <li><a href="usuarios.html"><i class="fas fa-user-shield"></i><span>Usuários</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu active">
+                <a href="#" class="submenu-trigger"><i class="fas fa-file-alt"></i><span>Documentos</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="peticoes.html"><i class="fas fa-file-signature"></i><span>Petições</span></a></li>
+                    <li><a href="contratos.html"><i class="fas fa-file-contract"></i><span>Contratos</span></a></li>
+                    <li><a href="modelos.html" class="active"><i class="fas fa-copy"></i><span>Modelos</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-chart-bar"></i><span>Relatórios</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="processos-por-status.html"><i class="fas fa-chart-pie"></i><span>Processos por Status</span></a></li>
+                    <li><a href="honorarios.html"><i class="fas fa-money-bill-wave"></i><span>Honorários</span></a></li>
+                    <li><a href="produtividade.html"><i class="fas fa-chart-line"></i><span>Produtividade</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-trigger"><i class="fas fa-dollar-sign"></i><span>Financeiro</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="lancamentos.html"><i class="fas fa-plus"></i><span>Lançamentos</span></a></li>
+                    <li><a href="a-receber.html"><i class="fas fa-arrow-down"></i><span>A Receber</span></a></li>
+                    <li><a href="a-pagar.html"><i class="fas fa-arrow-up"></i><span>A Pagar</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-cog"></i><span>Configurações</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="parametros.html"><i class="fas fa-sliders-h"></i><span>Parâmetros</span></a></li>
+                    <li><a href="backup.html"><i class="fas fa-database"></i><span>Backup</span></a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="logout-button">
+            <a href="index.html"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="welcome-text">
+                <h1>Modelos</h1>
+                <p>Gerencie os modelos de documentos do sistema</p>
+            </div>
+            <div class="user-info">
+                <div class="notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">5</span>
+                </div>
+                <div class="user-avatar">A</div>
+            </div>
+        </div>
+
+        <!-- Modelo List Content -->
+        <div class="document-list-container">
+            <div class="document-list-header">
+                <h2>Lista de Modelos</h2>
+                <div class="document-actions">
+                    <button class="document-filter-btn"><i class="fas fa-filter"></i> Filtrar</button>
+                    <button class="add-document-btn" onclick="showNovoModeloModal()"><i class="fas fa-plus"></i> Novo Modelo</button>
+                </div>
+            </div>
+
+            <table class="document-table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Tipo</th>
+                        <th>Título</th>
+                        <th>Última Atualização</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo de linha de modelo (será preenchido dinamicamente) -->
+                    <tr>
+                        <td>00001</td>
+                        <td>Petição Inicial</td>
+                        <td>Modelo de Petição Inicial</td>
+                        <td>01/01/2024</td>
+                        <td><span class="status-badge active">Ativo</span></td>
+                        <td>
+                            <button class="action-btn view-btn" title="Visualizar"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn edit-btn" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete-btn" title="Excluir"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal de Novo Modelo -->
+    <div id="modal-novo-modelo" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Novo Modelo</h2>
+                <button class="close-modal" onclick="closeNovoModeloModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="form-novo-modelo" onsubmit="event.preventDefault(); salvarModelo('form-novo-modelo');">
+                    <!-- Seção de Identificação -->
+                    <div class="form-section">
+                        <h3>Identificação</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="codigo_modelo">Código:</label>
+                                <input type="text" id="codigo_modelo" name="codigo_modelo" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="tipo_modelo" class="required">Tipo de Modelo:</label>
+                                <select id="tipo_modelo" name="tipo_modelo" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="Peticao">Petição</option>
+                                    <option value="Contrato">Contrato</option>
+                                    <option value="Procuração">Procuração</option>
+                                    <option value="Ofício">Ofício</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seção de Conteúdo -->
+                    <div class="form-section">
+                        <h3>Conteúdo</h3>
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="titulo_modelo" class="required">Título:</label>
+                                <input type="text" id="titulo_modelo" name="titulo_modelo" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="conteudo_modelo" class="required">Conteúdo:</label>
+                                <textarea id="conteudo_modelo" name="conteudo_modelo" rows="10" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seção de Variáveis -->
+                    <div class="form-section">
+                        <h3>Variáveis Disponíveis</h3>
+                        <div class="variables-list">
+                            <span class="variable-tag" onclick="inserirVariavelModelo('{nome_cliente}')">Nome do Cliente</span>
+                            <span class="variable-tag" onclick="inserirVariavelModelo('{cpf_cliente}')">CPF do Cliente</span>
+                            <span class="variable-tag" onclick="inserirVariavelModelo('{endereco_cliente}')">Endereço do Cliente</span>
+                            <span class="variable-tag" onclick="inserirVariavelModelo('{numero_processo}')">Número do Processo</span>
+                            <span class="variable-tag" onclick="inserirVariavelModelo('{data_atual}')">Data Atual</span>
+                            <span class="variable-tag" onclick="inserirVariavelModelo('{valor_total}')">Valor Total</span>
+                            <span class="variable-tag" onclick="inserirVariavelModelo('{nome_advogado}')">Nome do Advogado</span>
+                            <span class="variable-tag" onclick="inserirVariavelModelo('{oab_advogado}')">OAB do Advogado</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn-cancelar" onclick="closeNovoModeloModal()">Cancelar</button>
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Paginas_JS/cadastros-modals.js"></script>
+    <script src="../Paginas_JS/documentos.js"></script>
+    <script>
+        // Função para inicializar o estado dos menus
+        function initializeMenus() {
+            const currentPath = window.location.pathname;
+            const pathSegments = currentPath.replace(/^\/|\/$/g, '').split('/');
+            let currentPage = pathSegments.pop() || 'Pagina_princial.html';
+
+            if (currentPage === 'Fontend' || currentPage === 'Paginas_HTML' || currentPage === '') {
+                currentPage = 'Pagina_princial.html';
+            }
+
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                const linkHref = link.getAttribute('href');
+                if (linkHref && currentPage && linkHref.split('/').pop() === currentPage.split('/').pop()) {
+                    link.classList.add('active');
+                    const parentMenu = link.closest('.has-submenu');
+                    if (parentMenu) {
+                        parentMenu.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        // Toggle submenu
+        document.querySelectorAll('.submenu-trigger').forEach(trigger => {
+            trigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const parentMenu = this.closest('.has-submenu');
+                parentMenu.classList.toggle('active');
+            });
+        });
+
+        // Previne que cliques nos itens do submenu fechem o menu e marca o item ativo
+        document.querySelectorAll('.submenu a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.stopPropagation();
+                document.querySelectorAll('.submenu a').forEach(otherLink => {
+                    otherLink.classList.remove('active');
+                });
+                this.classList.add('active');
+                const parentMenu = this.closest('.has-submenu');
+                if (parentMenu) {
+                    parentMenu.classList.add('active');
+                }
+            });
+        });
+
+        // Inicializa os menus quando a página carrega
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMenus();
+        });
+    </script>
+</body>
+</html> 

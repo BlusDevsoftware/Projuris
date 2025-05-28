@@ -1,0 +1,169 @@
+/* Estilos específicos para a página de lista de audiências */
+
+.audiencia-list-container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+.audiencia-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.audiencia-list-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.audiencia-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.add-audiencia-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.add-audiencia-btn:hover {
+    background-color: #45a049;
+}
+
+.audiencia-filter-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.audiencia-filter-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Filtros */
+.audiencia-filters {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    align-items: end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-group label {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.filter-group input,
+.filter-group select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.btn-aplicar-filtros {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.btn-aplicar-filtros:hover {
+    background-color: #0056b3;
+}
+
+/* Tabela de Audiências */
+.audiencia-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.audiencia-table th,
+.audiencia-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e8eaed;
+}
+
+.audiencia-table th {
+    background-color: #f8f9fa;
+    color: #5f6368;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.audiencia-table tbody tr:hover {
+    background-color: #f1f3f4;
+}
+
+/* Status Labels */
+.status-label {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.status-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .audiencia-list-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .audiencia-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .audiencia-table {
+        display: block;
+        overflow-x: auto;
+    }
+} 

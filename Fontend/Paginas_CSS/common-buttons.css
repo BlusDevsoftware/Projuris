@@ -1,0 +1,166 @@
+/* Estilos comuns para botões em todas as páginas */
+
+/* Botão Principal (Novo/Adicionar) */
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+/* Botão Secundário (Filtrar) */
+.btn-secondary {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+/* Botão de Aplicar Filtros */
+.btn-apply-filters {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.btn-apply-filters:hover {
+    background-color: #0056b3;
+}
+
+/* Botões de Ação na Tabela */
+.action-btn {
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 4px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+}
+
+.action-btn i {
+    font-size: 14px;
+    color: white; /* Cor do ícone */
+}
+
+.view-btn {
+    background-color: #2196F3;
+}
+
+.edit-btn {
+    background-color: #FFC107;
+}
+
+.delete-btn {
+    background-color: #f44336;
+}
+
+.view-btn:hover {
+    background-color: #1976D2;
+}
+
+.edit-btn:hover {
+    background-color: #FFA000;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Botões do Modal */
+.btn-cancel {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.btn-cancel:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-save {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.btn-save:hover {
+    background-color: #0056b3;
+}
+
+/* Status Labels */
+.status-label {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.status-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Container de Ações */
+.actions-container {
+    display: flex;
+    gap: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .actions-container {
+        flex-direction: column;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+} 

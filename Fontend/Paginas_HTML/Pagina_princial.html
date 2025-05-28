@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProJuris - Sistema Jurídico</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Paginas_CSS/pagina_principal.css">
+    <link rel="stylesheet" href="../Paginas_CSS/common-buttons.css">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo" style="display: flex; align-items: center; justify-content: center; padding: 15px 0;">
+            <img src="../Imagens/bluedev-logo.png" alt="ProJuris Logo" style="height: 2.5em; margin-right: 10px;">
+            <h1><span class="orange">Pro</span><span class="highlight">Juris</span></h1>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="Pagina_princial.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+            <li><a href="agenda.html"><i class="fas fa-calendar-day"></i><span>Agendamentos</span></a></li>
+            <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-trigger"><i class="fas fa-gavel"></i><span>Processos</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="novo-processo.html"><i class="fas fa-plus-circle"></i><span>Novo Processo</span></a></li>
+                    <li><a href="lista-processos.html"><i class="fas fa-list"></i><span>Lista de Processos</span></a></li>
+                    <li><a href="audiencias.html"><i class="fas fa-balance-scale"></i><span>Audiências</span></a></li>
+                    <li><a href="prazos.html"><i class="fas fa-calendar-alt"></i><span>Prazos Processuais</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-users"></i><span>Cadastros</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="clientes.html"><i class="fas fa-user-tie"></i><span>Clientes</span></a></li>
+                    <li><a href="advogados.html"><i class="fas fa-user-graduate"></i><span>Advogados</span></a></li>
+                    <li><a href="tribunais.html"><i class="fas fa-landmark"></i><span>Tribunais</span></a></li>
+                    <li><a href="usuarios.html"><i class="fas fa-user-shield"></i><span>Usuários</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-file-alt"></i><span>Documentos</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="peticoes.html"><i class="fas fa-file-signature"></i><span>Petições</span></a></li>
+                    <li><a href="contratos.html"><i class="fas fa-file-contract"></i><span>Contratos</span></a></li>
+                    <li><a href="modelos.html"><i class="fas fa-copy"></i><span>Modelos</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-chart-bar"></i><span>Relatórios</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="processos-por-status.html"><i class="fas fa-chart-pie"></i><span>Processos por Status</span></a></li>
+                    <li><a href="honorarios.html"><i class="fas fa-money-bill-wave"></i><span>Honorários</span></a></li>
+                    <li><a href="produtividade.html"><i class="fas fa-chart-line"></i><span>Produtividade</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-trigger"><i class="fas fa-dollar-sign"></i><span>Financeiro</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="lancamentos.html"><i class="fas fa-plus"></i><span>Lançamentos</span></a></li>
+                    <li><a href="a-receber.html"><i class="fas fa-arrow-down"></i><span>A Receber</span></a></li>
+                    <li><a href="a-pagar.html"><i class="fas fa-arrow-up"></i><span>A Pagar</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-cog"></i><span>Configurações</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="parametros.html"><i class="fas fa-sliders-h"></i><span>Parâmetros</span></a></li>
+                    <li><a href="backup.html"><i class="fas fa-database"></i><span>Backup</span></a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="logout-button">
+            <a href="index.html"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="welcome-text">
+                <h1>Bem-vindo, Advogado</h1>
+                <p>Painel de Controle do Sistema Jurídico</p>
+            </div>
+            <div class="user-info">
+                <div class="notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">5</span>
+                </div>
+                <div class="user-avatar">A</div>
+            </div>
+        </div>
+
+        <!-- Dashboard Cards -->
+        <div class="dashboard-cards" id="sortable-cards">
+            <div class="card" data-card-id="processos">
+                <div class="card-header">
+                    <h3>Processos Ativos</h3>
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <div class="card-value">85</div>
+                <div class="card-change">+5 este mês</div>
+            </div>
+            <div class="card" data-card-id="audiencias">
+                <div class="card-header">
+                    <h3>Audiências Pendentes</h3>
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <div class="card-value">12</div>
+                <div class="card-change">3 esta semana</div>
+            </div>
+            <div class="card" data-card-id="prazos">
+                <div class="card-header">
+                    <h3>Prazos Críticos</h3>
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="card-value">8</div>
+                <div class="card-change">2 vencem hoje</div>
+            </div>
+            <div class="card" data-card-id="honorarios">
+                <div class="card-header">
+                    <h3>Honorários Pendentes</h3>
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <div class="card-value">R$ 45.000</div>
+                <div class="card-change">15 processos</div>
+            </div>
+        </div>
+
+        <!-- Latest Processes -->
+        <div class="latest-commissions">
+            <h2>Processos Recentes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número do Processo</th>
+                        <th>Cliente</th>
+                        <th>Advogado</th>
+                        <th>Status</th>
+                        <th>Próxima Audiência</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0001234-56.2024.8.26.0100</td>
+                        <td>João Silva</td>
+                        <td>Dra. Maria Santos</td>
+                        <td><span class="status pending">Em Andamento</span></td>
+                        <td>20/03/2024</td>
+                        <td>
+                            <button class="action-btn view-btn" title="Visualizar"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn edit-btn" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete-btn" title="Arquivar"><i class="fas fa-archive"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>0001235-56.2024.8.26.0100</td>
+                        <td>Maria Oliveira</td>
+                        <td>Dr. Pedro Costa</td>
+                        <td><span class="status paid">Aguardando Audiência</span></td>
+                        <td>25/03/2024</td>
+                        <td>
+                            <button class="action-btn view-btn" title="Visualizar"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn edit-btn" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete-btn" title="Arquivar"><i class="fas fa-archive"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>0001236-56.2024.8.26.0100</td>
+                        <td>Carlos Pereira</td>
+                        <td>Dra. Ana Lima</td>
+                        <td><span class="status cancelled">Arquivado</span></td>
+                        <td>-</td>
+                        <td>
+                            <button class="action-btn view-btn" title="Visualizar"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn edit-btn" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete-btn" title="Reativar"><i class="fas fa-undo"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Função para inicializar o estado dos menus
+        function initializeMenus() {
+            // Encontra o item de menu ativo atual
+            const currentPath = window.location.pathname;
+            // Remove a barra inicial e divide o caminho, pegando a última parte
+            const pathSegments = currentPath.replace(/^\/|\/$/g, '').split('/');
+            let currentPage = pathSegments.pop() || 'Pagina_princial.html'; // Define Pagina_princial.html como default
+
+            // Se a página for a raiz do site ou o diretório, defina como Pagina_princial.html
+            if (currentPage === 'Fontend' || currentPage === 'Paginas_HTML' || currentPage === '') {
+                currentPage = 'Pagina_princial.html';
+            }
+
+            // Procura o link correspondente à página atual
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                // Compara o href do link com a currentPage
+                const linkHref = link.getAttribute('href');
+                if (linkHref === currentPage) {
+                    // Marca o link como ativo
+                    link.classList.add('active');
+                    // Abre o submenu pai, se existir
+                    const parentMenu = link.closest('.has-submenu');
+                    if (parentMenu) {
+                        parentMenu.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        // Toggle submenu
+        document.querySelectorAll('.submenu-trigger').forEach(trigger => {
+            trigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Toggle apenas o menu clicado
+                const parentMenu = this.closest('.has-submenu');
+                parentMenu.classList.toggle('active');
+            });
+        });
+
+        // Previne que cliques nos itens do submenu fechem o menu
+        document.querySelectorAll('.submenu a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                // Remove active de todos os outros links
+                document.querySelectorAll('.submenu a').forEach(otherLink => {
+                    otherLink.classList.remove('active');
+                });
+                
+                // Adiciona active ao link clicado
+                this.classList.add('active');
+                
+                // Mantém o submenu pai aberto
+                const parentMenu = this.closest('.has-submenu');
+                if (parentMenu) {
+                    parentMenu.classList.add('active');
+                }
+            });
+        });
+
+        // Inicializa os menus quando a página carrega
+        document.addEventListener('DOMContentLoaded', initializeMenus);
+
+        // Inicializa o Sortable para os cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const el = document.getElementById('sortable-cards');
+            const sortable = new Sortable(el, {
+                animation: 150,
+                ghostClass: 'card-ghost',
+                onEnd: function(evt) {
+                    // Salva a nova ordem no localStorage
+                    const cards = Array.from(el.children).map(card => card.dataset.cardId);
+                    localStorage.setItem('dashboardCardsOrder', JSON.stringify(cards));
+                }
+            });
+
+            // Carrega a ordem salva dos cards
+            const savedOrder = localStorage.getItem('dashboardCardsOrder');
+            if (savedOrder) {
+                const order = JSON.parse(savedOrder);
+                const cards = Array.from(el.children);
+                order.forEach(cardId => {
+                    const card = cards.find(c => c.dataset.cardId === cardId);
+                    if (card) {
+                        el.appendChild(card);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

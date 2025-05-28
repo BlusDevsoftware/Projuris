@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProJuris - Honorários</title>
+    <link rel="stylesheet" href="../Paginas_CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Paginas_CSS/pagina_principal.css">
+    <link rel="stylesheet" href="../Paginas_CSS/honorarios.css">
+    <link rel="stylesheet" href="../Paginas_CSS/common-buttons.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo" style="display: flex; align-items: center; justify-content: center; padding: 15px 0;">
+            <img src="../Imagens/bluedev-logo.png" alt="ProJuris Logo" style="height: 2.5em; margin-right: 10px;">
+            <h1><span class="orange">Pro</span><span class="highlight">Juris</span></h1>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="Pagina_princial.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+            <li><a href="agenda.html"><i class="fas fa-calendar-day"></i><span>Agenda do Dia</span></a></li>
+            <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-trigger"><i class="fas fa-gavel"></i><span>Processos</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="novo-processo.html"><i class="fas fa-plus-circle"></i><span>Novo Processo</span></a></li>
+                    <li><a href="lista-processos.html"><i class="fas fa-list"></i><span>Lista de Processos</span></a></li>
+                    <li><a href="audiencias.html"><i class="fas fa-balance-scale"></i><span>Audiências</span></a></li>
+                    <li><a href="prazos.html"><i class="fas fa-calendar-alt"></i><span>Prazos Processuais</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-users"></i><span>Cadastros</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="clientes.html"><i class="fas fa-user-tie"></i><span>Clientes</span></a></li>
+                    <li><a href="advogados.html"><i class="fas fa-user-graduate"></i><span>Advogados</span></a></li>
+                    <li><a href="tribunais.html"><i class="fas fa-landmark"></i><span>Tribunais</span></a></li>
+                    <li><a href="usuarios.html"><i class="fas fa-user-shield"></i><span>Usuários</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-file-alt"></i><span>Documentos</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="peticoes.html"><i class="fas fa-file-signature"></i><span>Petições</span></a></li>
+                    <li><a href="contratos.html"><i class="fas fa-file-contract"></i><span>Contratos</span></a></li>
+                    <li><a href="modelos.html"><i class="fas fa-copy"></i><span>Modelos</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger active"><i class="fas fa-chart-bar"></i><span>Relatórios</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu" style="display: block;">
+                    <li><a href="processos-por-status.html"><i class="fas fa-chart-pie"></i><span>Processos por Status</span></a></li>
+                    <li><a href="honorarios.html" class="active"><i class="fas fa-money-bill-wave"></i><span>Honorários</span></a></li>
+                    <li><a href="produtividade.html"><i class="fas fa-chart-line"></i><span>Produtividade</span></a></li>
+                </ul>
+            </li>
+             <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-trigger"><i class="fas fa-dollar-sign"></i><span>Financeiro</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="lancamentos.html"><i class="fas fa-plus"></i><span>Lançamentos</span></a></li>
+                    <li><a href="a-receber.html"><i class="fas fa-arrow-down"></i><span>A Receber</span></a></li>
+                    <li><a href="a-pagar.html"><i class="fas fa-arrow-up"></i><span>A Pagar</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger"><i class="fas fa-cog"></i><span>Configurações</span><i class="fas fa-chevron-down submenu-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="parametros.html"><i class="fas fa-sliders-h"></i><span>Parâmetros</span></a></li>
+                    <li><a href="backup.html"><i class="fas fa-database"></i><span>Backup</span></a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="logout-button">
+            <a href="index.html"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="welcome-text">
+                <h1>Relatório de Honorários</h1>
+                <p>Visualize e gerencie os honorários do sistema</p>
+            </div>
+            <div class="user-info">
+                <div class="notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">5</span>
+                </div>
+                <div class="user-avatar">A</div>
+            </div>
+        </div>
+
+        <!-- Honorarios Content -->
+        <div class="honorarios-container">
+            <div class="honorarios-header">
+                <h2>Lista de Honorários</h2>
+                <div class="honorarios-actions">
+                     <button class="honorarios-filter-btn"><i class="fas fa-filter"></i> Filtrar</button>
+                    <!-- Add other actions if needed, e.g., Export -->
+                </div>
+            </div>
+
+            <div class="honorarios-filters">
+                <!-- Filter form elements would go here (e.g., date range, status, client) -->
+                <p>Área para filtros (a ser implementada)</p>
+            </div>
+
+            <table class="honorarios-table">
+                <thead>
+                    <tr>
+                        <th>Processo</th>
+                        <th>Cliente</th>
+                        <th>Tipo</th>
+                        <th>Valor</th>
+                        <th>Data de Vencimento</th>
+                        <th>Status</th>
+                         <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example rows (will be populated dynamically) -->
+                    <tr>
+                        <td>12345-67.2023.8.26.0001</td>
+                        <td>Nome do Cliente 1</td>
+                        <td>Inicial</td>
+                        <td>R$ 5.000,00</td>
+                        <td>DD/MM/AAAA</td>
+                        <td><span class="status-label status-em-andamento">Pendente</span></td>
+                         <td>
+                            <button class="action-btn view-btn">Ver</button>
+                             <button class="action-btn edit-btn">Editar</button>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>98765-43.2023.8.26.0002</td>
+                        <td>Nome do Cliente 2</td>
+                        <td>Êxito</td>
+                        <td>R$ 15.000,00</td>
+                        <td>DD/MM/AAAA</td>
+                        <td><span class="status-label status-aberto">Pago</span></td>
+                         <td>
+                            <button class="action-btn view-btn">Ver</button>
+                             <button class="action-btn edit-btn">Editar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="total-honorarios">
+                Total Estimado/Recebido: R$ 20.000,00 (Exemplo)
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Função para inicializar o estado dos menus
+        function initializeMenus() {
+            const currentPath = window.location.pathname;
+            const pathSegments = currentPath.replace(/^\/|\/$/g, '').split('/');
+            let currentPage = pathSegments.pop() || 'Pagina_princial.html';
+
+            if (currentPage === 'Fontend' || currentPage === 'Paginas_HTML' || currentPage === '') {
+                currentPage = 'Pagina_princial.html';
+            }
+
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                const linkHref = link.getAttribute('href');
+                 if (linkHref && currentPage && linkHref.split('/').pop() === currentPage.split('/').pop()) {
+                    link.classList.add('active');
+                    const parentMenu = link.closest('.has-submenu');
+                    if (parentMenu) {
+                        parentMenu.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        // Toggle submenu
+        document.querySelectorAll('.submenu-trigger').forEach(trigger => {
+            trigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const parentMenu = this.closest('.has-submenu');
+                parentMenu.classList.toggle('active');
+            });
+        });
+
+        // Previne que cliques nos itens do submenu fechem o menu e marca o item ativo
+        document.querySelectorAll('.submenu a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.stopPropagation();
+                document.querySelectorAll('.submenu a').forEach(otherLink => {
+                    otherLink.classList.remove('active');
+                });
+                this.classList.add('active');
+                const parentMenu = this.closest('.has-submenu');
+                if (parentMenu) {
+                    parentMenu.classList.add('active');
+                }
+            });
+        });
+
+        // Inicializa os menus quando a página carrega
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMenus();
+        });
+
+        // TODO: Implementar funcionalidade de Filtrar Honorários
+         document.querySelector('.honorarios-filter-btn').addEventListener('click', function() {
+             alert('Funcionalidade Filtrar Honorários será implementada em breve.');
+         });
+
+         // TODO: Implementar funcionalidades de Ver e Editar Honorários
+         document.querySelectorAll('.action-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.classList.contains('view-btn')) {
+                    alert('Funcionalidade Ver Honorário será implementada em breve.');
+                } else if (this.classList.contains('edit-btn')) {
+                    alert('Funcionalidade Editar Honorário será implementada em breve.');
+                }
+            });
+         });
+
+    </script>
+</body>
+</html> 

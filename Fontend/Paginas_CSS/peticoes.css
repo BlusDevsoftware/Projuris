@@ -1,0 +1,151 @@
+/* Estilos específicos para a página de lista de petições */
+
+.peticao-list-container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.peticao-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.peticao-list-header h2 {
+    margin: 0;
+    color: #202124;
+}
+
+.peticao-actions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    margin-left: 10px;
+}
+
+.add-peticao-btn {
+    background-color: #1a73e8;
+    color: white;
+}
+
+.add-peticao-btn:hover {
+    background-color: #1557b0;
+}
+
+.peticao-filter-btn {
+    background-color: #f1f3f4;
+    color: #202124;
+}
+
+.peticao-filter-btn:hover {
+    background-color: #e8eaed;
+}
+
+.peticao-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.peticao-table th,
+.peticao-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e8eaed;
+}
+
+.peticao-table th {
+    background-color: #f8f9fa;
+    color: #5f6368;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.peticao-table tbody tr:hover {
+    background-color: #f1f3f4;
+}
+
+.peticao-table .action-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 5px;
+    transition: background-color 0.2s;
+}
+
+.peticao-table .view-btn {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+}
+
+.peticao-table .view-btn:hover {
+    background-color: #d2e3fc;
+}
+
+.peticao-table .edit-btn {
+    background-color: #fef7e0;
+    color: #f9ab00;
+}
+
+.peticao-table .edit-btn:hover {
+    background-color: #fde293;
+}
+
+.peticao-table .delete-btn {
+    background-color: #fce8e6;
+    color: #d93025;
+}
+
+.peticao-table .delete-btn:hover {
+    background-color: #fccac2;
+}
+
+/* Estilos para o status do documento */
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-badge.active {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-badge.inactive {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.status-badge.pending {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .peticao-list-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .document-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .peticao-table {
+        display: block;
+        overflow-x: auto;
+    }
+} 

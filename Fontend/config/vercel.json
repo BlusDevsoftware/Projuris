@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "../Paginas_HTML/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "../Paginas_CSS/*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "../Paginas_JS/*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "../Imagens/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "../Icones/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/Paginas_HTML/Pagina_princial.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/Paginas_HTML/$1"
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "/Paginas_CSS/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/Paginas_JS/$1"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/Imagens/$1"
+    },
+    {
+      "src": "/icons/(.*)",
+      "dest": "/Icones/$1"
+    }
+  ]
+} 

@@ -1,0 +1,178 @@
+/* CSS extraído de Pagina_colaboradores.html */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.toast {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    min-width: 300px;
+    transform: translateX(120%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+.toast i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.toast.success {
+    border-left: 4px solid #4CAF50;
+}
+
+.toast.error {
+    border-left: 4px solid #f44336;
+}
+
+.toast.info {
+    border-left: 4px solid #2196F3;
+}
+
+.toast button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: auto;
+    padding: 0 5px;
+}
+
+.toast button:hover {
+    color: #333;
+}
+
+.view-details {
+    padding: 20px;
+}
+
+.detail-row {
+    margin-bottom: 15px;
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.detail-row strong {
+    width: 200px;
+    color: #666;
+}
+
+.detail-row span {
+    flex: 1;
+    color: #333;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    margin: 0 2px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-btn {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #198754;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+}
+
+.action-btn i {
+    font-size: 14px;
+}
+
+.actions {
+    white-space: nowrap;
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.status.ativo {
+    background-color: #e8f5e9;
+    color: #4CAF50;
+}
+
+.status.inativo {
+    background-color: #ffebee;
+    color: #f44336;
+}
+
+.delete-confirmation {
+    max-width: 400px;
+}
+
+.delete-icon {
+    text-align: center;
+    font-size: 48px;
+    color: #dc3545;
+    margin: 20px 0;
+}
+
+.delete-message {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.delete-warning {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.modal-content.delete-confirmation .form-actions {
+    justify-content: center;
+    gap: 10px;
+} 
